@@ -1,0 +1,22 @@
+<% @book.errors.full_messages.each do |error| %>
+  <%= error %>
+<% end %>
+
+<p>
+  Enter some info for the new book:
+</p>
+
+<%= form_tag create_path do %>
+  <%= label_tag "book[name]", "Name" %>
+  <%= text_field_tag "book[name]", @book.name %>
+
+  <%= label_tag "book[author]", "Author" %>
+  <%= text_field_tag "book[author]", @book.author %>
+
+  <%= label_tag "book[isbn_no]", "ISBN" %>
+  <%= text_field_tag "book[isbn_no]", @book.isbn_no %>
+
+  <%= label_tag "book[description]", "Description" %>
+  <%= text_field_tag "book[description]", @book.description %>
+  <%= submit_tag %>
+<% end %>

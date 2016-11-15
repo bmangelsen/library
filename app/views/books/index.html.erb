@@ -1,0 +1,7 @@
+<p><%= link_to "Add book!", "books/new" %></p>
+
+<p>Here is your list of books:</p>
+
+<% @books.each do |book| %>
+  <%= link_to "#{book.name}", "book/#{book.id}" %>
+<% end %>
