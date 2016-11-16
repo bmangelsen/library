@@ -1,12 +1,21 @@
-<p><%= label_tag "book[name]", "Name: " %>
-<%= text_field_tag "book[name]", @book.name %></p>
-
-<p><%= label_tag "book[author]", "Author: " %>
-<%= text_field_tag "book[author]", @book.author %></p>
-
-<p><%= label_tag "book[isbn_no]", "ISBN: " %>
-<%= text_field_tag "book[isbn_no]", @book.isbn_no %></p>
-
-<p><%= label_tag "book[description]", "Description: " %>
-<%= text_field_tag "book[description]", @book.description %></p>
-<%= submit_tag "Save", class: "btn btn-default btn-sm" %>
+<%= form_for @book do |b| %>
+  <p>
+    <%= b.label :name %>
+    <%= b.text_field :name %>
+  </p>
+  <p>
+    <%= b.label :author %>
+    <%= b.text_field :author %>
+  </p>
+  <p>
+    <%= b.label :isbn_no %>
+    <%= b.text_field :isbn_no %>
+  </p>
+  <p>
+    <%= b.label :description %>
+    <%= b.text_field :description %>
+  </p>
+  <p>
+    <%= b.submit "Save", class: "btn btn-default btn-sm"%>
+  </p>
+<% end %>

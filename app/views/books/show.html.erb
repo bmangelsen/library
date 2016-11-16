@@ -1,0 +1,13 @@
+<p>Here are some details about your book:</p>
+
+
+<p><span>Name</span>: <%= @book.name %></p>
+<p><span>Author</span>: <%= @book.author %></p>
+<p><span>ISBN</span>: <%= @book.isbn_no %></p>
+<p><span>Description</span>: <%= @book.description %></p>
+
+
+<%= link_to "Update Book", edit_book_path(@book.id), class: "btn btn-default btn-sm" %>
+<%= link_to "Delete Book", book_path(@book.id), method: :delete, class: "btn btn-default btn-sm" %>
+<%= link_to "Reserve this book", new_book_reservation_path(@book.id), class: "btn btn-default btn-sm" %>
+<%= link_to "See all reservations", book_reservations_path(@book.id), class: "btn btn-default btn-sm" %>

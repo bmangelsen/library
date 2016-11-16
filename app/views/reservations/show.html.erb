@@ -1,0 +1,19 @@
+<%= link_to "Back to your book", book_path(@reservation.book_id) %>
+
+<p>Here are some details about your reservation:</p>
+
+<p><span>Reserver</span>: <%= @reservation.name %></p>
+<p><span>Book Reserved</span>: <%= Book.find(@reservation.book_id).name %></p>
+<p><span>Due Date</span>: <%= @reservation.due_date %></p>
+<p><span>Return Date</span>: <%= @reservation.return_date %></p>
+
+<% if @reservation.return_date %>
+  <% if @reservation.return_date > @reservation.due_date %>
+    <div class="alert">
+      <strong>Warning!</strong> The book is overdue!
+    </div>
+  <% end %>
+<% end %>
+
+<%= link_to "Update Reservation", edit_book_reservation_path(@book.id, @reservation.id), class: "btn btn-default btn-sm" %>
+<%= link_to "Delete Reservation", book_reservation_path(@book.id, @reservation.id), method: :delete, class: "btn btn-default btn-sm" %>

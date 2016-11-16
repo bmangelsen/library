@@ -21,3 +21,12 @@ body {
   font-family: fantasy;
   font-size: 30px;
 }
+
+th {
+  text-align:center;
+}
+
+.alert {
+  font-family: monospace;
+  font-size: 32px;
+}

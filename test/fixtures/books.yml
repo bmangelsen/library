@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  isbn_no: MyString
-  description: MyText
-  author: MyString
+hobbit:
+  name: The Hobbit
+  isbn_no: 1234
+  description: Pretty cool book
+  author: Tolkien
 
-two:
-  name: MyString
-  isbn_no: MyString
-  description: MyText
-  author: MyString
+lotr:
+  name: Lord of the Rings
+  isbn_no: 2345
+  description: Pretty cool book
+  author: Tolkien

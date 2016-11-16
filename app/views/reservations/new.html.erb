@@ -1,0 +1,26 @@
+<% @reservation.errors.full_messages.each do |error| %>
+  <%= error %>
+<% end %>
+
+<p>Enter some info for the new reservation:</p>
+
+<%= form_for @reservation, :url => book_reservations_url(@book.id) do |r| %>
+  <p>
+    <%= r.label :name %>
+    <%= r.text_field :name %>
+  </p>
+  <p>
+    <%= r.label :due_date %>
+    <%= r.date_field :due_date %>
+  </p>
+  <p>
+    <%= r.label :return_date %>
+    <%= r.date_field :return_date %>
+  </p>
+
+  <%= r.hidden_field :book_id, value: @book.id %>
+
+  <p>
+    <%= r.submit "Save", class: "btn btn-default btn-sm" %>
+  </p>
+<% end %>
