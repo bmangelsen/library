@@ -3,7 +3,7 @@
 <p>Here is the list of reservations:</p>
 
 <ul>
-  <% @reservations.each do |reservation| %>
+  <% @book_reservations.each do |reservation| %>
     <li><%= link_to "#{reservation.name}", book_reservation_path(@book.id, reservation.id) %></li>
   <% end %>
 </ul

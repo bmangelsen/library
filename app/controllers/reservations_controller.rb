@@ -5,7 +5,7 @@ class ReservationsController < ApplicationController
 
   def index
     @book = Book.find(params[:book_id])
-    @reservations = Reservation.all
+    @book_reservations = @book.reservations(params[:book_id])
   end
 
   def show

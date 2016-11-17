@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 hobbit:
-  name: The Hobbit
+  name: the hobbit
   isbn_no: 1234
-  description: Pretty cool book
-  author: Tolkien
+  description: pretty cool book
+  author: tolkien
 
 lotr:
-  name: Lord of the Rings
+  name: lord of the rings
   isbn_no: 2345
-  description: Pretty cool book
-  author: Tolkien
+  description: pretty cool book
+  author: tolkien
